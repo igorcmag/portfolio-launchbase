@@ -89,6 +89,7 @@ header{
 
 .card{
     background-color: var(--color-rocket);
+    display: grid;
 }
 
 
@@ -98,7 +99,9 @@ header{
 
 .card__content,
 .card__info{
+    display: grid;
     padding: 24px;
+    align-items: center;
 }
 
 .card__info{
@@ -146,4 +149,11 @@ header{
 .modal-overlay.active{
     opacity: 1;
     visibility: visible;
+}
+
+iframe{
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
 }
