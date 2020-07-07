@@ -44,7 +44,7 @@ header{
 #wrapper img{
     border-radius: 50%;
     border: 5px solid var(--color-green);
-    margin-bottom 32px;
+    margin-bottom: 32px;
     height: 300px;
 }
 
@@ -90,6 +90,7 @@ header{
 .card{
     background-color: var(--color-rocket);
     display: grid;
+    cursor: pointer;
 }
 
 
@@ -157,3 +158,38 @@ iframe{
     position: absolute;
     top: 5%;
 }
+
+/*=== FEATURED ===*/
+
+.featured-wrapper.card__image-container{
+    position: relative;
+}
+
+.featured{
+    position: absolute;
+    background-color: #f7d05f;
+    padding: 2px 8px;
+    border-radius: 16px;
+    color: #111;
+    top: 130px;
+    right: 5px;
+}
+
+/* === VIDEO PAGE === */
+
+.video{
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.card__video-container{
+    position: relative;
+    padding-top: 62.5%;
+}
+
+.card__video-container iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+} 

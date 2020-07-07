@@ -1,17 +1,18 @@
-const express = require('express')
-const nunjucks = require('nunjucks')
+const express = require('express');
+const nunjucks = require('nunjucks');
 
-const server = express()
-const videos = require('./data.js')
+const server = express();
+const videos = require('./data.js');
 
-server.set('view engine', 'njk')
+server.set('view engine', 'njk');
 
 nunjucks.configure('views', {
     express: server,
-    autoescape: false
-})
+    autoescape: false,
+    noCache: true
+});
 
-server.use(express.static('public'))
+server.use(express.static('public'));
 
 server.get('/', function(req, res){
     const about = {
@@ -24,14 +25,28 @@ server.get('/', function(req, res){
             {name: "Linkedin", url: "/"},
             {name: "Lattes", url: "/"}
         ]
-    }
-    return res.render('about', {about})
-})
+    };
+    return res.render('about', {about});
+});
 
 server.get('/portfolio', function(req, res){
-    return res.render('portfolio', {items: videos})
-})
+    return res.render('portfolio', {items: videos});
+});
+
+server.get('/video', function(req, res){
+    const id = req.query.id;
+
+    const video = videos.find(function(video){
+        if(video.id == id){
+            return true;
+        };
+    });
+    if(!video){
+        res.send('Video not found');
+    }
+    res.render('video', {item: video});
+});
 
 server.listen(5002, function(){
-    console.log('server is running')
-})
+    console.log('server is running');
+});
