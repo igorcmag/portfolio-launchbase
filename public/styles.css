@@ -83,14 +83,14 @@ header{
     max-width: 800px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
 .card{
-    background-color: var(--color-rocket);
+    background-color: #282a36;
+    filter: brightness(90%);
     display: grid;
-    cursor: pointer;
 }
 
 
@@ -98,74 +98,46 @@ header{
     width: 100%;
 }
 
-.card__content,
-.card__info{
+.card__content{
     display: grid;
-    padding: 24px;
+    padding: 15px 20px;
     align-items: center;
 }
 
 .card__info{
     display: grid;
+    align-items: center;
+    padding: 0 20px 20px 20px;
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    
 }
 
-.card__price{
-    background-color: var(--color-rocket);
+.card__link,
+.card__github{
+    background-color: #282a36;
     filter: brightness(90%);
     padding: 5px 20px;
     border-radius: 20px;
     text-align: center;
 }
 
-/*=== MODAL ===*/
-.modal-overlay{
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    opacity: 0;
-    visibility: hidden;
+.card a{
+    color: white;
+    text-decoration: none;
 }
-
-.modal {
-    background-color: white;
-    width: 90%;
-    height: 90%;
-    margin: 5vh auto;
-    position: relative;
-}
-
-.close-modal{
-    color: black;
-    position: absolute;
-    right: 8px;
-    top: 8px;
-    cursor: pointer;
-}
-
-/*=== MODAL.ACTIVE ===*/
-
-.modal-overlay.active{
-    opacity: 1;
-    visibility: visible;
-}
-
-iframe{
-    width: 100%;
-    height: 90%;
-    position: absolute;
-    top: 5%;
+.card a:hover{
+    color: var(--color-green);
+    transition: color 200ms;
 }
 
 /*=== FEATURED ===*/
 
-.featured-wrapper.card__image-container{
+.incomplete-wrapper.card__image-container{
     position: relative;
 }
 
-.featured{
+.incomplete{
     position: absolute;
     background-color: #f7d05f;
     padding: 2px 8px;
