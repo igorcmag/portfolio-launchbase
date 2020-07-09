@@ -1,8 +1,12 @@
-<html>
-    <head>
+{% extends "layoult.njk" %}
 
-    </head>
-    <body>
-        erro 404
-    </body>
-</html>
+{% block head %}
+    <title>Page not found</title>
+{% endblock%}
+
+{% block content %}
+    <div id="wrapper">
+        <h1>Page not found</h1>
+        <h3>Sorry, this page doesn't exist. Click <a href="/">here</a> to return to the main page.</h3>
+    </div>
+{% endblock %}

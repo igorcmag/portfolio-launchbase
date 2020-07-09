@@ -2,7 +2,6 @@
 
 {% block head %}
     <title>Portfolio - Igor Magalhães</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 {% endblock%}
 
 {% block content %}
@@ -22,12 +21,11 @@
                     <h3>{{item.title}}</h3>
                     <p>{{item.description}}</p>
                 </div>
-                <div class="card__info">
-                    <p class="card__link"><a href="{{item.website_url}}" target="_blank">Visit website</a></p>
+                <div class="card__links">
+                    <p class="card__website"><a href="{{item.website_url}}" target="_blank">Visit website</a></p>
                     <p class="card__github"><a href="{{item.github_url}}" target="_blank">GitHub</a></p>
                 </div>
             </div>
         {% endfor %}
     </section>
-    <script src="/scripts.js"></script>
 {% endblock %}

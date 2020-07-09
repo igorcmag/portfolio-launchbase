@@ -2,7 +2,6 @@
 
 :root{
     --color-green: #50fa7b;
-    --color-rocket: #7159c1;
 }
 
 *{
@@ -73,6 +72,10 @@ header{
     color: var(--color-green);
 }
 
+#links-footer{
+    margin-bottom: 10px;
+}
+
 #links-footer a{
     border-bottom: 1px solid var(--color-green);
 }
@@ -91,6 +94,7 @@ header{
     background-color: #282a36;
     filter: brightness(90%);
     display: grid;
+    height: 100%;
 }
 
 
@@ -104,7 +108,7 @@ header{
     align-items: center;
 }
 
-.card__info{
+.card__links{
     display: grid;
     align-items: center;
     padding: 0 20px 20px 20px;
@@ -113,7 +117,11 @@ header{
     
 }
 
-.card__link,
+.card__content h3{
+    padding-bottom: 10px;
+}
+
+.card__website,
 .card__github{
     background-color: #282a36;
     filter: brightness(90%);
@@ -146,22 +154,3 @@ header{
     top: 130px;
     right: 5px;
 }
-
-/* === VIDEO PAGE === */
-
-.video{
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-.card__video-container{
-    position: relative;
-    padding-top: 62.5%;
-}
-
-.card__video-container iframe{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-} 
